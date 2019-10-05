@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Reazul Islam</title>
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+        <div class="content">
+            <div class="home">
+                <h1>I am Reazul</h1>
+                <h3>Web Developer</h3>
+            </div>
+            <div class="aboutus">
+                <p><b>Hello Friends,</b><br>
+                    Hi! I am <b>Reazul Islam,</b><br> 
+                    A <b>web designer/developer</b> focused on crafting great web experiences.<br>
+                    Designing and Coding have been my passion since the days I started working 
+                    with computers but I found myself into <b>web design/development</b> since 2015. 
+                    I enjoy creating beautifully designed, intuitive and functional websites.<br>
+                    For over past 5 years, I have worked for some of the digital agencies and wonderful
+                     clients to create some award winning works.<br> <b>And, I can make this happen for your business as well.</b> 
+                </p>
+            </div>
+
+            <div class="gallery">
+                <h1> Hello, This is my Gallery!!</h1>
+                <div class="image">
+                    <img src="images/1.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/4.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/1.jpg" alt="">
+                    </div>
+                <div class="image">
+                    <img src="images/4.jpg" alt="">
+                </div>
+                <div class="image">
+                        <img src="images/1.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="images/4.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="images/1.jpg" alt="">
+                        </div>
+                    <div class="image">
+                        <img src="images/4.jpg" alt="">
+                    </div>
+            </div>
+
+        <div class="contactus">
+            <div class="contactform">
+                <form action="index.html" method="post">
+                    <input type="text" name="" class="inputtext" value="First Name">
+                    <input type="text" name="" class="inputtext" value="Last Name">
+                    <input type="text" name="" class="inputtext" value="Your Email">
+                    <textarea id="" rows="6" class="inputmessage">Your Messages...!!!</textarea>
+                    <input type="button" name="" class="submitbutton" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+       
+        $(document).ready(function(){
+            $('a').click(function(){
+                //alert("welcome");
+                var selected = $(this);
+                $('a').removeClass('active'); 
+                $(selected).addClass('active');
+            });
+            
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home      = $('.home'),
+            $aboutus   = $('.aboutus'),
+            $gallery   = $('.gallery'),
+            $contactus = $('.contactus');
+
+            $a.click(function(){
+                $home.fadeIn();
+                $aboutus.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+            });
+            $b.click(function(){
+                $aboutus.fadeIn();
+                $home.fadeOut(); 
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+            });
+            $c.click(function(){
+                $gallery.fadeIn();
+                $home.fadeOut();
+                $aboutus.fadeOut();
+                $contactus.fadeOut();
+            });
+            $d.click(function(){
+                $contactus.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $aboutus.fadeOut();
+                
+            });
+        });
+    </script>
+</body>
+</html>
